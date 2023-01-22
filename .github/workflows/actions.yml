@@ -22,7 +22,7 @@ jobs:
           pip install -r requirements.txt
         
       - name: execute py script # run tracer.py
-      run: python tracer.py
+        run: python tracer.py
       
       - name: commit files
         run: |
