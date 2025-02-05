@@ -39,12 +39,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
-      - name: Run Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-      - name: execute py script
-        run: python3 ./tracer.py
+      - name: Download Go Binary
+        run: |
+          curl -L -o ./tracer "https://github.com/justinbornais/go-directory-tracer/releases/download/v0.1.1/tracer"
+          chmod +x ./tracer
+      - name: Execute Go Binary
+        run: ./tracer --title "Sample Directory"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
