@@ -11,6 +11,7 @@ const fuse = new Fuse(d, {
 const exts = {
     'doc': '📝',
     'docx': '📝',
+    'exe': '💻',
     'csv': '📊',
     'xls': '📊',
     'xlsx': '📊',
